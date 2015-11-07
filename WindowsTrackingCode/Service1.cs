@@ -22,7 +22,7 @@ namespace WindowsTrackingCode
         }
         protected override void OnStart(string[] args)
         {
-            string path = AppDomain.CurrentDomain.BaseDirectory + "TestFile.txt";
+            string path = AppDomain.CurrentDomain.BaseDirectory + "OnStart.txt";
             Library lib = new Library();
 
             Process[] processlist = lib.ShowProcesses();
