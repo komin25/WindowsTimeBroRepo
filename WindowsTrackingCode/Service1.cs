@@ -24,6 +24,7 @@ namespace WindowsTrackingCode
         {
             string path = AppDomain.CurrentDomain.BaseDirectory + "OnStart.txt";
             Library lib = new Library();
+            ;
 
             Process[] processlist = lib.ShowProcesses();
 
