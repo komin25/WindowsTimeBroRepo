@@ -14,12 +14,18 @@ namespace WindowsTrackingCode
         /// </summary>
         static void Main()
         {
+
+#if DEBUG
+            Service1 debugMode = new Service1();
+            debugMode.OnDebug();
+#else
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
                 new Service1()
             };
             ServiceBase.Run(ServicesToRun);
+#endif
         }
     }
 }

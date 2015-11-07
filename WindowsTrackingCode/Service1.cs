@@ -16,9 +16,18 @@ namespace WindowsTrackingCode
         {
             InitializeComponent();
         }
-
+        public void OnDebug()
+        {
+            OnStart(null);
+        }
         protected override void OnStart(string[] args)
         {
+            string path = AppDomain.CurrentDomain.BaseDirectory + "TestFile.txt";
+            Library lib = new Library();
+
+            Process[] processlist = lib.ShowProcesses();
+
+            lib.WriteToFile(processlist, path);
         }
 
         protected override void OnStop()
